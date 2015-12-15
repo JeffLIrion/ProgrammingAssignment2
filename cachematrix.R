@@ -6,17 +6,10 @@
 makeCacheMatrix <- function(x = matrix()) {
   ## makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
   xInv <- NULL
-#   set <- function(y) {
-#    x <<- y
-#    xInv <<- NULL
-#   }
-#   print(x)
-#   print(xInv)
 
   getx <- function() x
   setxInv <- function(solve) xInv <<- solve
   getxInv <- function() xInv
-  #list(set=set, getx=getx, setxInv=setxInv, getxInv=getxInv)
   list(getx=getx, setxInv=setxInv, getxInv=getxInv)
 }
 
